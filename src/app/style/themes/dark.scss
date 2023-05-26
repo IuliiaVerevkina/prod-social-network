@@ -2,4 +2,5 @@
 .app.dark {
       background-color: $--bg-color_dark;
       color: $--primary-color_dark;
+	transition: .5s all;
 }

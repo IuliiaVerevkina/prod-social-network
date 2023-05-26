@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 @import "./reset.scss";
-@import "./themes/normal.scss";
+@import "./themes/light.scss";
 @import "./themes/dark.scss";
 @import "./variables/global.scss";
 
@@ -8,7 +8,5 @@
 	font-family: 'Poppins', sans-serif;
 	font-size: $--size_m;
 	line-height: $--line_m;
-	background-color: $--bg-color_light;
-	color: $--primary-color_light;
 	min-height: 100vh;
 }
