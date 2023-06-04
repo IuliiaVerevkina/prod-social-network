@@ -1,3 +1,3 @@
-import { LengSwitcher } from "./ui/LengSwitcher";
+import {LengSwitcher} from './ui/LengSwitcher';
 
-export {LengSwitcher}
+export {LengSwitcher};
