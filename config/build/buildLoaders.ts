@@ -20,6 +20,16 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
                   },
             ],
       };
+      const babelLoader = {
+            test: /\.(js|jsx|tsx)$/,
+            exclude: /node_modules/,
+            use: {
+                  loader: "babel-loader",
+                  options: {
+                        presets: ["@babel/preset-env"],
+                  },
+            },
+      };
       const cssLoader = {
             test: /\.s[ac]ss$/i,
             use: [
@@ -39,15 +49,5 @@ export function buildLoaders({ isDev }: BuildOptions): RuleSetRule[] {
                   "sass-loader",
             ],
       };
-	const babel = {
-            test: /\.(js|jsx|ts|tsx)$/,
-            exclude: /node_modules/,
-            use: {
-                  loader: "babel-loader",
-                  options: {
-                        presets: ["@babel/preset-env"],
-                  },
-            },
-      };
-      return [typeScriptLoader, cssLoader, svgLoader, fileLoader, babel];
+      return [fileLoader, svgLoader, babelLoader, typeScriptLoader, cssLoader];
 }
