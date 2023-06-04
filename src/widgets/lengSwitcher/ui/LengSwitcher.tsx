@@ -1,6 +1,7 @@
 import {useTranslation} from 'react-i18next';
 import {classNames} from 'shared/lib/classNames/classNames';
 
+import cls from './LengSwitcher.module.scss';
 import {Button, ThemeButton} from 'shared/ui/button/Button';
 
 type LengSwitcherProps = {
@@ -14,7 +15,7 @@ export const LengSwitcher = ({className}: LengSwitcherProps) => {
 
 	return (
 		<Button
-			className={classNames('', {}, [className!])}
+			className={classNames(cls.LengSwitcher, {}, [className!])}
 			theme={ThemeButton.CLEAR}
 			onClick={toggle}
 		>
