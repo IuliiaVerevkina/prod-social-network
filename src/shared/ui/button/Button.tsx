@@ -6,8 +6,8 @@ export enum ThemeButton {
 	CLEAR = 'clear',
 }
 type ButtonProps = {
-	className: string;
-	theme: ThemeButton;
+	className?: string;
+	theme?: ThemeButton;
 	children?: React.ReactNode;
 } & ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -16,7 +16,7 @@ export const Button: FC<ButtonProps> = props => {
 	return (
 		<button
 			type='button'
-			className={classNames(cls.Button, {}, [className, cls[theme]])}
+			className={classNames(cls.Button, {}, [className!, cls[theme!]])}
 			// eslint-disable-next-line react/jsx-props-no-spreading
 			{...otherProps}
 		>

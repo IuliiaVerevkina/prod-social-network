@@ -11,6 +11,7 @@ module.exports = {
 		{
 			extends: [
 				'xo-typescript',
+				'plugin:i18next/recommended',
 			],
 			files: [
 				'*.ts',
@@ -24,6 +25,7 @@ module.exports = {
 	},
 	plugins: [
 		'react',
+		'i18n',
 	],
 	rules: {
 		'react/jsx-filename-extension': [2, {extensions: ['.js', '.jsx', '.tsx']}],
@@ -39,6 +41,7 @@ module.exports = {
 		'import/no-extraneous-dependencies': 'off',
 		'no-underscore-dangle': 'off',
 		'@typescript-eslint/no-unsafe-argument': 'off',
+		'i18next/no-literal-string': ['error', {markupOnly: true}],
 	},
 	globals: {
 		__IS_DEV__: true,

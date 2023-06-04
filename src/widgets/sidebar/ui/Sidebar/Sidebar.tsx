@@ -21,7 +21,7 @@ export const Sidebar = ({className}: SidebarProps) => {
 			className={classNames(
 				cls.Sidebar,
 				{[cls.collapsed]: collapsed},
-				[className],
+				[className!],
 			)}
 		>
 			<Button onClick={onToggle}>toggle</Button>

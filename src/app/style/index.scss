@@ -1,8 +1,8 @@
 
-@import "./reset.scss";
-@import "./themes/light.scss";
-@import "./themes/dark.scss";
-@import "./variables/global.scss";
+@import "./reset";
+@import "./themes/light";
+@import "./themes/dark";
+@import "./variables/global";
 
 .app {
       font: var(--font-m);
@@ -10,8 +10,10 @@
       background: var(--bg-color);
       color: var(--primary-color);
 	transition: 0.3s all;
+
 	&-page {
 		display: flex;
+
 		&-wrapper {
 			flex-grow: 1;
 			padding: 20px;

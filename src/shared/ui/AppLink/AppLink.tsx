@@ -10,7 +10,7 @@ export enum AppLinkTheme {
 }
 
 type AppLinkProps = {
-	className: string;
+	className?: string;
 	children?: React.ReactNode;
 	theme?: AppLinkTheme;
 } & LinkProps;
@@ -19,7 +19,7 @@ export const AppLink: FC<AppLinkProps> = props => {
 	const {to, children, className, theme = AppLinkTheme.PRIMARY, ...otherProps} = props;
 	return (
 		// eslint-disable-next-line react/jsx-props-no-spreading
-		<Link className={classNames(cls.AppLink, {}, [className, cls[theme]])} to={to} {...otherProps}>
+		<Link className={classNames(cls.AppLink, {}, [className!, cls[theme]])} to={to} {...otherProps}>
 			{children}
 		</Link>
 	);

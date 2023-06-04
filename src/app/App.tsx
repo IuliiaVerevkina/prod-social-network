@@ -9,7 +9,7 @@ import {Sidebar} from 'widgets/sidebar';
 function App() {
 	const {theme} = useTheme();
 	return (
-		<div className={classNames('app', {}, [theme])}>
+		<div className={classNames('app', {}, [theme!])}>
 			<Suspense fallback='loading'>
 				<NavBar />
 				<div className='app-page'>
